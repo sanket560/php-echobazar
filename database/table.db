@@ -1,0 +1,71 @@
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    image VARCHAR (255) NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    link VARCHAR(255),
+    old_price DECIMAL(10, 2),
+);
+
+CREATE TABLE user_info (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
+    birth_date DATE NOT NULL,
+    gender ENUM('male', 'female', 'prefer_not_to_say') NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    country VARCHAR(255) NOT NULL,
+    city VARCHAR(255) NOT NULL,
+    region VARCHAR(255) NOT NULL,
+    postal_code VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    product_name VARCHAR(255) NOT NULL,
+    price INT NOT NULL,
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES user_info(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+##### inserting #####
+
+INSERT INTO products (name, category, price, old_price, image) 
+VALUES
+('Oneplus Nord CE 3 5G', 'phone', 24999, 26999, 'Oneplus_Nord_CE_3.jpg'),
+('Samsung Galaxy M13', 'phone', 8199, 14999, 'Samsung_Galaxy_M13.jpg'),
+('IQOO Z7s 5G', 'phone', 15999, 23999, 'IQOO_Z7s_5G.jpg'), 
+('Lava Agni 2 5G', 'phone', 19999, 25999, 'Lava_Agni_2.jpg'), 
+('Apple iPhone 15', 'phone', 76990, 79900, 'iphone15.jpg'), 
+('realme narzo 60 Pro', 'phone', 26999, 28999, 'realme_narzo_60_Pro.jpg'),
+('intel P55 5G', 'phone', 10499, 13499, 'intel_P55_5G.jpg'),
+('iQOO Neo 7 5G', 'phone', 24999, 34999, 'iQOO_Neo_7_5G.jpg');
+
+INSERT INTO products (name, category, price, old_price, image) 
+VALUES 
+('Titan Karishma Analog Black Dial Men Watch', 'men_watch', 1595, 1995, 'titan.jpg'),
+('Fossil Gen 6 Digital Black Dial Mens Watch', 'men_watch', 11997, 23995, 'Fossil.jpg'), 
+('Fastrack New Limitless Glide Advanced UltraVU HD', 'men_watch', 1699, 39995, 'fastrack_ultaVu_HD.jpg'), 
+('Noise Newly Launched Quad Call 1.81 Metallic Build', 'men_watch', 1199, 5999, 'Noise.jpg'), 
+('Fire-Boltt Lumos Stainless Steel Luxury Smart Watch', 'women_watch', 1499, 14999, 'fire_bolt.jpg'),
+('Fastrack Analog Black Dial Womens Casual Watch', 'women_watch', 2249, 3495, 'fastrack_women.jpg'),
+('ADAMO Aritocrat Womens Premium Analog Watch', 'women_watch', 549, 2495, 'ADAMO.jpg'),
+('Maxima Sprint 1.39" HD Large Round Dial Smart Watch', 'women_watch', 1599, 8959, 'Maxima.jpg');
+
+INSERT INTO products (name, category, price, old_price, image) 
+VALUES 
+('Scott International Mens Cotton Blend High Neck Jacket', 'men_wear', 739, 3999, 'jacket.jpg'),
+('Urbano Fashion Mens Regular Fit Washed Jeans Stretchable', 'men_wear', 799, 1799, 'Jeans.jpg'), 
+('rytras Mens Cotton Printed Straight Kurta', 'men_wear', 479, 1999, 'kurta.jpg'), 
+('Mens Slim Fit Shirt', 'men_wear', 555, 1799, 'shirt.jpg'), 
+('Lycra Saree And Unstitched Blouse Piece', 'women_wear', 599, 999, 'saree.jpg'),
+('ONLY Women T-Shirt', 'women_wear', 389, 1299, 'tshirt.jpg'),
+('rangita Women Cotton Flex Navy Tonal', 'women_wear', 588, 1199, 'kurta.jpg'),
+('Marks & Spencer Womens Rayon A-Line Knee-Length', 'women_wear', 2250, 4499, 'Casual.jpg');

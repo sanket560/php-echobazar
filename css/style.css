@@ -1,0 +1,385 @@
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+.latest-deal .card {
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.latest-deal .card:hover {
+    border: 2px solid #5271ff;
+}
+
+.newsletter-subscribe {
+    color: #313437;
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.newsletter-subscribe p {
+    color: #7d8285;
+    line-height: 1.5;
+}
+
+.newsletter-subscribe h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    padding-top: 0;
+    margin-top: 0;
+    color: inherit;
+}
+
+.newsletter-subscribe .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 25px;
+}
+
+.newsletter-subscribe .intro p {
+    margin-bottom: 35px;
+}
+
+.newsletter-subscribe form {
+    justify-content: center;
+}
+
+.newsletter-subscribe form .form-control {
+    background: #eff1f4;
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+    text-indent: 9px;
+    height: 45px;
+    margin-right: 10px;
+    min-width: 250px;
+}
+
+.newsletter-subscribe form .btn {
+    padding: 16px 32px;
+    border: none;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    opacity: 0.9;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    line-height: 1;
+}
+
+.newsletter-subscribe form .btn:hover {
+    opacity: 1;
+}
+
+.newsletter-subscribe form .btn:active {
+    transform: translateY(1px);
+}
+
+.newsletter-subscribe form .btn-primary {
+    background-color: #055ada !important;
+    color: #fff;
+    outline: none !important;
+}
+
+/* login */
+::selection {
+    color: #fff;
+    background: #5372F0;
+}
+
+.login-page {
+    width: 380px;
+    padding: 40px 30px 50px 30px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login-page header {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.login-page form {
+    margin: 40px 0;
+}
+
+.login-page form .field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-page form .field.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        margin-left: 0px;
+    }
+
+    20%,
+    80% {
+        margin-left: -12px;
+    }
+
+    40%,
+    60% {
+        margin-left: 12px;
+    }
+}
+
+.login-page form .field .input-area {
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.login-page form input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 45px;
+    font-size: 18px;
+    background: none;
+    caret-color: #5372F0;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    border-bottom-width: 2px;
+    transition: all 0.2s ease;
+}
+
+.login-page form .field input:focus,
+.login-page form .field.valid input {
+    border-color: #5372F0;
+}
+
+.login-page form .field.shake input,
+.login-page form .field.error input {
+    border-color: #dc3545;
+}
+
+.login-page .field .input-area i {
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.login-page .input-area .icon {
+    left: 15px;
+    color: #bfbfbf;
+    transition: color 0.2s ease;
+}
+
+.login-page .input-area .error-icon {
+    right: 15px;
+    color: #dc3545;
+}
+
+.login-page form input:focus~.icon,
+.login-page form .field.valid .icon {
+    color: #5372F0;
+}
+
+.login-page form .field.shake input:focus~.icon,
+.login-page form .field.error input:focus~.icon {
+    color: #bfbfbf;
+}
+
+.login-page form input::placeholder {
+    color: #bfbfbf;
+    font-size: 17px;
+}
+
+.login-page form .field .error-txt {
+    color: #dc3545;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.login-page form .field .error {
+    display: none;
+}
+
+.login-page form .field.shake .error,
+.login-page form .field.error .error {
+    display: block;
+}
+
+.login-page form .pass-txt {
+    text-align: left;
+    margin-top: -10px;
+}
+
+.login-page a {
+    color: #5372F0;
+    text-decoration: none;
+}
+
+.login-page a:hover {
+    text-decoration: underline;
+}
+
+.login-page form input[type="submit"] {
+    height: 50px;
+    margin-top: 30px;
+    color: #fff;
+    padding: 0;
+    border: none;
+    background: #5372F0;
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.login-page form input[type="submit"]:hover {
+    background: #2c52ed;
+}
+
+/* register */
+
+  .Registration header {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .Registration .input-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .Registration .input-box label {
+    color: #333;
+  }
+  .Registration .form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+  }
+  .Registration .input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  .Registration .form .column {
+    display: flex;
+    column-gap: 15px;
+  }
+  .Registration .form .gender-box {
+    margin-top: 20px;
+  }
+  .Registration .gender-box h3 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .Registration .form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+  }
+  .Registration .form .gender {
+    column-gap: 5px;
+  }
+  .Registration .gender input {
+    accent-color: rgb(130, 106, 251);
+  }
+  .Registration .form :where(.gender input, .gender label) {
+    cursor: pointer;
+  }
+  .Registration .gender label {
+    color: #707070;
+  }
+  .Registration .address :where(input, .select-box) {
+    margin-top: 15px;
+  }
+  .Registration .select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+  }
+  .Registration .form button {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(130, 106, 251);
+  }
+  .Registration .form button:hover {
+    background: rgb(88, 56, 250);
+  }
+  /*Responsive*/
+  @media screen and (max-width: 500px) {
+    .Registration .form .column {
+      flex-wrap: wrap;
+    }
+    .Registration .form :where(.gender-option, .gender) {
+      row-gap: 15px;
+    }
+  }
